@@ -16,5 +16,23 @@
   <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
 
   <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+  
+  <style name="Itera"/>
+
+  <style name="Itera.Courses"/>
+  
+  <style name="Itera.Courses.CourseListTitle">
+    <item name="android:layout_marginTop">@dimen/courses_list_title_margin_vertical</item>
+    <item name="android:layout_marginBottom">@dimen/courses_list_title_margin_vertical</item>
+    <item name="android:background">@color/iteraForegroundPrimary</item>
+    <item name="android:textColor">@color/iteraTextLight</item>
+    <item name="android:textSize">@dimen/sub_title_size</item>
+    <item name="android:textAllCaps">false</item>
+    <item name="android:paddingTop">@dimen/courses_list_title_padding_vertical</item>
+    <item name="android:paddingBottom">@dimen/courses_list_title_padding_vertical</item>
+    <item name="android:paddingStart">@dimen/courses_list_title_padding_horizontal</item>
+    <item name="android:paddingEnd">@dimen/courses_list_title_padding_horizontal</item>
+    <item name="android:textAlignment">center </item>
+  </style>
 
 </resources>

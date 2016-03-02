@@ -13,4 +13,11 @@
   <dimen name="activity_horizontal_margin">@dimen/default_margin</dimen>
   <dimen name="activity_vertical_margin">@dimen/default_margin</dimen>
   <dimen name="fab_margin">@dimen/default_margin</dimen>
+
+  <dimen name="courses_list_title_margin_vertical">@dimen/margin_small</dimen>
+  <dimen name="courses_list_title_padding_vertical">@dimen/default_padding</dimen>
+  <dimen name="courses_list_title_padding_horizontal">@dimen/default_padding_horizontal</dimen>
+
+  <dimen name="sub_title_size">20dp</dimen>
+  <dimen name="text_margin">16dp</dimen>
 </resources>
