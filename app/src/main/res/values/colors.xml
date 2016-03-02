@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <color name="colorPrimary">#3F51B5</color>
-  <color name="colorPrimaryDark">#303F9F</color>
-  <color name="colorAccent">#FF4081</color>
+  <color name="iteraPrimary">#D7090C</color>
+  <color name="iteraSecondary">#424041</color>
+  <color name="iteraTertiary">#5DC3E7</color>
+  <color name="iteraForeground">#FFFFFF</color>
+  <color name="iteraForegroundPrimary">@color/iteraPrimary</color>
+  <color name="iteraForegroundDark">@color/iteraSecondary</color>
+  <color name="iteraTitle">@color/iteraPrimary</color>
+  <color name="iteraSubtitle">@color/iteraSecondary</color>
+  <color name="iteraBodyText">@color/iteraSecondary</color>
 </resources>
