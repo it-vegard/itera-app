@@ -8,5 +8,6 @@
   <color name="iteraForegroundDark">@color/iteraSecondary</color>
   <color name="iteraTitle">@color/iteraPrimary</color>
   <color name="iteraSubtitle">@color/iteraSecondary</color>
-  <color name="iteraBodyText">@color/iteraSecondary</color>
+  <color name="iteraTextDark">@color/iteraSecondary</color>
+  <color name="iteraTextLight">@color/iteraForeground </color>
 </resources>
