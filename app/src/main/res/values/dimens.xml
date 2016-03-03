@@ -6,6 +6,8 @@
   <dimen name="default_padding_vertical">@dimen/default_padding</dimen>
   <dimen name="default_padding_horizontal">15dp</dimen>
 
+  <dimen name="padding_small">5dp</dimen>
+
   <!-- Default screen margins, per the Android Design guidelines. -->
   <dimen name="nav_header_vertical_spacing">@dimen/default_margin</dimen>
   <dimen name="nav_header_height">160dp</dimen>
@@ -18,6 +20,9 @@
   <dimen name="courses_list_title_padding_vertical">@dimen/default_padding</dimen>
   <dimen name="courses_list_title_padding_horizontal">@dimen/default_padding_horizontal</dimen>
 
+  <dimen name="courses_list_item_padding">@dimen/padding_small</dimen>
+  
   <dimen name="sub_title_size">20dp</dimen>
+  <dimen name="sub_sub_title_size">15dp</dimen>
   <dimen name="text_margin">16dp</dimen>
 </resources>
