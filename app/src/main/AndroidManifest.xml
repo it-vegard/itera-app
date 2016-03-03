@@ -18,6 +18,15 @@
         <category android:name="android.intent.category.LAUNCHER"/>
       </intent-filter>
     </activity>
+    <activity
+        android:name=".activities.events.course.CourseActivity"
+        android:label="@string/title_activity_course"
+        android:parentActivityName=".activities.events.courselist.CourseListActivity"
+        android:theme="@style/AppTheme.NoActionBar">
+      <meta-data
+          android:name="android.support.PARENT_ACTIVITY"
+          android:value="no.itera.app.makeadifference.activities.events.courselist.CourseListActivity"/>
+    </activity>
   </application>
 
 </manifest>

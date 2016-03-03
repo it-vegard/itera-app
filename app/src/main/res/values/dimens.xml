@@ -21,7 +21,7 @@
   <dimen name="courses_list_title_padding_horizontal">@dimen/default_padding_horizontal</dimen>
 
   <dimen name="courses_list_item_padding">@dimen/padding_small</dimen>
-  
+
   <dimen name="sub_title_size">20dp</dimen>
   <dimen name="sub_sub_title_size">15dp</dimen>
   <dimen name="text_margin">16dp</dimen>

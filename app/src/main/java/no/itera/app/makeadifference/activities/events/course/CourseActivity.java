@@ -1,4 +1,4 @@
-package no.itera.app.makeadifference.activities.events.courselist;
+package no.itera.app.makeadifference.activities.events.course;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,17 +16,20 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import no.itera.app.makeadifference.R;
-import no.itera.app.makeadifference.activities.events.course.CourseActivity;
 
-public class CourseListActivity extends AppCompatActivity
-    implements NavigationView.OnNavigationItemSelectedListener, CourseListFragment.OnListFragmentInteractionListener {
+public class CourseActivity extends AppCompatActivity
+    implements NavigationView.OnNavigationItemSelectedListener {
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_courses);
+    setContentView(R.layout.activity_course);
     Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
     setSupportActionBar(toolbar);
+
+    Intent instigatingIntent = getIntent();
+    String courseId = instigatingIntent.getExtras().get("courseId").toString();
+    Toast.makeText(this, "Launching course '" + courseId + "'", Toast.LENGTH_LONG).show();
 
     FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
     fab.setOnClickListener(new View.OnClickListener() {
@@ -60,7 +63,7 @@ public class CourseListActivity extends AppCompatActivity
   @Override
   public boolean onCreateOptionsMenu(Menu menu) {
     // Inflate the menu; this adds items to the action bar if it is present.
-    getMenuInflater().inflate(R.menu.courses, menu);
+    getMenuInflater().inflate(R.menu.course, menu);
     return true;
   }
 
@@ -102,12 +105,5 @@ public class CourseListActivity extends AppCompatActivity
     DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
     drawer.closeDrawer(GravityCompat.START);
     return true;
-  }
-
-  @Override
-  public void onListFragmentInteraction(CourseList.Course item) {
-    Intent intent = new Intent(this, CourseActivity.class);
-    intent.putExtra("courseId", item.id);
-    startActivity(intent);
   }
 }

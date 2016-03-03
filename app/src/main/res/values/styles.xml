@@ -16,13 +16,13 @@
   <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
 
   <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
-  
+
   <style name="Itera"/>
 
   <style name="Itera.CourseList">
     <item name="android:textColor">@color/iteraTextDark</item>
   </style>
-  
+
   <style name="Itera.CourseList.ListTitle">
     <item name="android:layout_marginTop">@dimen/courses_list_title_margin_vertical</item>
     <item name="android:layout_marginBottom">@dimen/courses_list_title_margin_vertical</item>
@@ -34,7 +34,7 @@
     <item name="android:paddingBottom">@dimen/courses_list_title_padding_vertical</item>
     <item name="android:paddingStart">@dimen/courses_list_title_padding_horizontal</item>
     <item name="android:paddingEnd">@dimen/courses_list_title_padding_horizontal</item>
-    <item name="android:textAlignment">center </item>
+    <item name="android:textAlignment">center</item>
   </style>
 
   <style name="Itera.CourseList.List"/>
