@@ -1,4 +1,4 @@
-package no.itera.app.makeadifference;
+package no.itera.app.makeadifference.activities.events.courselist;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -14,7 +14,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import no.itera.app.makeadifference.events.CourseList;
+import no.itera.app.makeadifference.R;
 
 public class CourseListActivity extends AppCompatActivity
     implements NavigationView.OnNavigationItemSelectedListener, CourseListFragment.OnListFragmentInteractionListener {

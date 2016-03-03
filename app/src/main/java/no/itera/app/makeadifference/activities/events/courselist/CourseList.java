@@ -1,4 +1,4 @@
-package no.itera.app.makeadifference.events;
+package no.itera.app.makeadifference.activities.events.courselist;
 
 import java.util.ArrayList;
 import java.util.HashMap;

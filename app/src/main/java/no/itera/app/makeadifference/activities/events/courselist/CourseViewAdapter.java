@@ -1,4 +1,4 @@
-package no.itera.app.makeadifference;
+package no.itera.app.makeadifference.activities.events.courselist;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -6,8 +6,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import no.itera.app.makeadifference.CourseListFragment.OnListFragmentInteractionListener;
-import no.itera.app.makeadifference.events.CourseList.Course;
+import no.itera.app.makeadifference.activities.events.courselist.CourseListFragment.OnListFragmentInteractionListener;
+import no.itera.app.makeadifference.R;
+import no.itera.app.makeadifference.activities.events.courselist.CourseList.Course;
 
 import java.util.List;
 

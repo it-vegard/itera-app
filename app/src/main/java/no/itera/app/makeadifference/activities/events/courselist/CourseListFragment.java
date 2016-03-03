@@ -1,4 +1,4 @@
-package no.itera.app.makeadifference;
+package no.itera.app.makeadifference.activities.events.courselist;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -10,8 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import no.itera.app.makeadifference.events.CourseList;
-import no.itera.app.makeadifference.events.CourseList.Course;
+import no.itera.app.makeadifference.R;
+import no.itera.app.makeadifference.activities.events.courselist.CourseList.Course;
 
 /**
  * A fragment representing a list of Items.
