@@ -16,7 +16,7 @@ import android.widget.Toast;
 
 import no.itera.app.makeadifference.events.CourseList;
 
-public class CoursesActivity extends AppCompatActivity
+public class CourseListActivity extends AppCompatActivity
     implements NavigationView.OnNavigationItemSelectedListener, CourseListFragment.OnListFragmentInteractionListener {
 
   @Override
