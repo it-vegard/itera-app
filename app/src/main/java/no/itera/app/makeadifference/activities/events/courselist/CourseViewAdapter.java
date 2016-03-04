@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 import no.itera.app.makeadifference.activities.events.courselist.CourseListFragment.OnListFragmentInteractionListener;
 import no.itera.app.makeadifference.R;
-import no.itera.app.makeadifference.activities.events.courselist.CourseList.Course;
+import no.itera.app.makeadifference.models.Course;
 
 import java.util.List;
 
@@ -37,8 +37,8 @@ public class CourseViewAdapter extends RecyclerView.Adapter<CourseViewAdapter.Vi
   @Override
   public void onBindViewHolder(final ViewHolder holder, int position) {
     holder.course = mValues.get(position);
-    holder.courseTitleView.setText(mValues.get(position).title);
-    holder.courseTitleDescription.setText(mValues.get(position).details);
+    holder.courseTitleView.setText(mValues.get(position).getTitle());
+    holder.courseTitleDescription.setText(mValues.get(position).getDetails());
 
     holder.courseView.setOnClickListener(new View.OnClickListener() {
       @Override

@@ -17,6 +17,7 @@ import android.widget.Toast;
 
 import no.itera.app.makeadifference.R;
 import no.itera.app.makeadifference.activities.events.course.CourseActivity;
+import no.itera.app.makeadifference.models.Course;
 
 public class CourseListActivity extends AppCompatActivity
     implements NavigationView.OnNavigationItemSelectedListener, CourseListFragment.OnListFragmentInteractionListener {
@@ -105,9 +106,9 @@ public class CourseListActivity extends AppCompatActivity
   }
 
   @Override
-  public void onListFragmentInteraction(CourseList.Course item) {
+  public void onListFragmentInteraction(Course course) {
     Intent intent = new Intent(this, CourseActivity.class);
-    intent.putExtra("courseId", item.id);
+    intent.putExtra("courseId", course.getId());
     startActivity(intent);
   }
 }

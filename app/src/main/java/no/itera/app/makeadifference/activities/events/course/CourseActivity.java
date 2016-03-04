@@ -13,9 +13,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import no.itera.app.makeadifference.R;
+import no.itera.app.makeadifference.models.Course;
+import no.itera.app.makeadifference.models.CourseList;
 
 public class CourseActivity extends AppCompatActivity
     implements NavigationView.OnNavigationItemSelectedListener {
@@ -29,7 +32,16 @@ public class CourseActivity extends AppCompatActivity
 
     Intent instigatingIntent = getIntent();
     String courseId = instigatingIntent.getExtras().get("courseId").toString();
-    Toast.makeText(this, "Launching course '" + courseId + "'", Toast.LENGTH_LONG).show();
+    Course course = CourseList.getDummyCourses().get(courseId);
+    if (course != null) {
+      Toast.makeText(this, "Launching course '" + course.getTitle() + "' (id =" + course.getId() + ").", Toast.LENGTH_LONG).show();
+      TextView titleView = (TextView) findViewById(R.id.course_title);
+      titleView.setText(course.getTitle());
+      TextView descriptionView = (TextView) findViewById(R.id.course_description);
+      descriptionView.setText(course.getDetails());
+    } else {
+      Toast.makeText(this, "Couldn't find course with id '" + courseId + "'.", Toast.LENGTH_SHORT).show();
+    }
 
     FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
     fab.setOnClickListener(new View.OnClickListener() {
