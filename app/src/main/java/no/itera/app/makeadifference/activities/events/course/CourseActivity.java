@@ -5,43 +5,22 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.view.View;
-import android.support.design.widget.NavigationView;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import no.itera.app.makeadifference.R;
+import no.itera.app.makeadifference.activities.NavigationDrawerActivity;
 import no.itera.app.makeadifference.models.Course;
 import no.itera.app.makeadifference.models.CourseList;
 
-public class CourseActivity extends AppCompatActivity
-    implements NavigationView.OnNavigationItemSelectedListener {
+public class CourseActivity extends NavigationDrawerActivity {
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_course);
-    Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-    setSupportActionBar(toolbar);
+    initDrawerActivity(R.layout.activity_course);
 
-    Intent instigatingIntent = getIntent();
-    String courseId = instigatingIntent.getExtras().get("courseId").toString();
-    Course course = CourseList.getDummyCourses().get(courseId);
-    if (course != null) {
-      Toast.makeText(this, "Launching course '" + course.getTitle() + "' (id =" + course.getId() + ").", Toast.LENGTH_LONG).show();
-      TextView titleView = (TextView) findViewById(R.id.course_title);
-      titleView.setText(course.getTitle());
-      TextView descriptionView = (TextView) findViewById(R.id.course_description);
-      descriptionView.setText(course.getDetails());
-    } else {
-      Toast.makeText(this, "Couldn't find course with id '" + courseId + "'.", Toast.LENGTH_SHORT).show();
-    }
+    initCourse();
 
     FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
     fab.setOnClickListener(new View.OnClickListener() {
@@ -51,71 +30,24 @@ public class CourseActivity extends AppCompatActivity
             .setAction("Action", null).show();
       }
     });
-
-    DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-    ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-        this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-    drawer.setDrawerListener(toggle);
-    toggle.syncState();
-
-    NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-    navigationView.setNavigationItemSelectedListener(this);
   }
 
-  @Override
-  public void onBackPressed() {
-    DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-    if (drawer.isDrawerOpen(GravityCompat.START)) {
-      drawer.closeDrawer(GravityCompat.START);
+  private void initCourse() {
+    Intent instigatingIntent = getIntent();
+    String courseId = instigatingIntent.getExtras().get("courseId").toString();
+    Course course = loadCourse(courseId);
+    if (course != null) {
+      TextView titleView = (TextView) findViewById(R.id.course_title);
+      titleView.setText(course.getTitle());
+      TextView descriptionView = (TextView) findViewById(R.id.course_description);
+      descriptionView.setText(course.getDetails());
     } else {
-      super.onBackPressed();
+      Toast.makeText(this, "Couldn't find course with id '" + courseId + "'.", Toast.LENGTH_SHORT).show();
     }
   }
 
-  @Override
-  public boolean onCreateOptionsMenu(Menu menu) {
-    // Inflate the menu; this adds items to the action bar if it is present.
-    getMenuInflater().inflate(R.menu.course, menu);
-    return true;
-  }
-
-  @Override
-  public boolean onOptionsItemSelected(MenuItem item) {
-    // Handle action bar item clicks here. The action bar will
-    // automatically handle clicks on the Home/Up button, so long
-    // as you specify a parent activity in AndroidManifest.xml.
-    int id = item.getItemId();
-
-    //noinspection SimplifiableIfStatement
-    if (id == R.id.action_settings) {
-      return true;
-    }
-
-    return super.onOptionsItemSelected(item);
-  }
-
-  @SuppressWarnings("StatementWithEmptyBody")
-  @Override
-  public boolean onNavigationItemSelected(MenuItem item) {
-    // Handle navigation view item clicks here.
-    int id = item.getItemId();
-
-    if (id == R.id.nav_camera) {
-      // Handle the camera action
-    } else if (id == R.id.nav_gallery) {
-
-    } else if (id == R.id.nav_slideshow) {
-
-    } else if (id == R.id.nav_manage) {
-
-    } else if (id == R.id.nav_share) {
-
-    } else if (id == R.id.nav_send) {
-
-    }
-
-    DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-    drawer.closeDrawer(GravityCompat.START);
-    return true;
+  private Course loadCourse(String courseId) {
+    // Currently loading dummy-data. Should load from couchbase instead.
+    return CourseList.getDummyCourses().get(courseId);
   }
 }
