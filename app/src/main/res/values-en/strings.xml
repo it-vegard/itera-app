@@ -5,5 +5,10 @@
 
   <string name="course_list_title">Upcoming events</string>
 
+  <string name="course_title_label">Title</string>
+  <string name="course_description_label">Description</string>
+  <string name="course_start_date_label">Start time</string>
+  <string name="course_end_date_label">End time</string>
+
   <string name="action_settings">Settings</string>
 </resources>

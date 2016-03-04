@@ -27,6 +27,15 @@
           android:name="android.support.PARENT_ACTIVITY"
           android:value="no.itera.app.makeadifference.activities.events.courselist.CourseListActivity"/>
     </activity>
+    <activity
+        android:name=".activities.events.course.CreateCourseActivity"
+        android:label="@string/title_activity_create_course"
+        android:parentActivityName=".activities.events.courselist.CourseListActivity"
+        android:theme="@style/AppTheme.NoActionBar">
+      <meta-data
+          android:name="android.support.PARENT_ACTIVITY"
+          android:value="no.itera.app.makeadifference.activities.events.courselist.CourseListActivity"/>
+    </activity>
   </application>
 
 </manifest>

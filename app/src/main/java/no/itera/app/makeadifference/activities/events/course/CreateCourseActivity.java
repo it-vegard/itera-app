@@ -1,4 +1,4 @@
-package no.itera.app.makeadifference.activities.events.courselist;
+package no.itera.app.makeadifference.activities.events.course;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,32 +13,21 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.Toast;
 
 import no.itera.app.makeadifference.R;
-import no.itera.app.makeadifference.activities.events.course.CourseActivity;
-import no.itera.app.makeadifference.activities.events.course.CreateCourseActivity;
-import no.itera.app.makeadifference.models.Course;
+import no.itera.app.makeadifference.activities.events.courselist.CourseListActivity;
 
-public class CourseListActivity extends AppCompatActivity
-    implements NavigationView.OnNavigationItemSelectedListener, CourseListFragment.OnListFragmentInteractionListener {
+public class CreateCourseActivity extends AppCompatActivity
+    implements NavigationView.OnNavigationItemSelectedListener {
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_courses);
+    setContentView(R.layout.activity_create_course);
     Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
     setSupportActionBar(toolbar);
-
-    FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-    fab.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View view) {
-        //Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG).setAction("Action", null).show();
-        Intent intent = new Intent(view.getContext(), CreateCourseActivity.class);
-        startActivity(intent);
-      }
-    });
 
     DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
     ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -48,6 +37,18 @@ public class CourseListActivity extends AppCompatActivity
 
     NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
     navigationView.setNavigationItemSelectedListener(this);
+
+    Button submitButton = (Button) findViewById(R.id.create_course_submit_button);
+    submitButton.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View view) {
+        // TODO: Save to db
+        Toast.makeText(view.getContext(), "Should now save activity", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(view.getContext(), CourseListActivity.class);
+        // intent.putExtra("NEW-COURSE-ID", "ID-FROM-DB");
+        startActivity(intent);
+      }
+    });
   }
 
   @Override
@@ -63,7 +64,7 @@ public class CourseListActivity extends AppCompatActivity
   @Override
   public boolean onCreateOptionsMenu(Menu menu) {
     // Inflate the menu; this adds items to the action bar if it is present.
-    getMenuInflater().inflate(R.menu.courses, menu);
+    getMenuInflater().inflate(R.menu.create_course, menu);
     return true;
   }
 
@@ -105,12 +106,5 @@ public class CourseListActivity extends AppCompatActivity
     DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
     drawer.closeDrawer(GravityCompat.START);
     return true;
-  }
-
-  @Override
-  public void onListFragmentInteraction(Course course) {
-    Intent intent = new Intent(this, CourseActivity.class);
-    intent.putExtra("courseId", course.getId());
-    startActivity(intent);
   }
 }
