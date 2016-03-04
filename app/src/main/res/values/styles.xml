@@ -52,4 +52,17 @@
     <item name="android:textStyle">italic</item>
   </style>
 
+  <style name="Itera.Course"/>
+
+  <style name="Itera.Course.Title">
+    <item name="android:textSize">@dimen/title_size</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:layout_marginBottom">@dimen/course_title_margin_bottom</item>
+  </style>
+
+  <style name="Itera.Course.Description">
+    <item name="android:textSize">@dimen/text_size</item>
+    <item name="android:layout_marginBottom">@dimen/course_description_margin_bottom</item>
+  </style>
+
 </resources>

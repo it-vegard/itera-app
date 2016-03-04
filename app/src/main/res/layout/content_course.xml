@@ -13,4 +13,24 @@
     tools:context="no.itera.app.makeadifference.activities.events.course.CourseActivity"
     tools:showIn="@layout/app_bar_course">
 
+  <LinearLayout
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/course_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Itera.Course.Title"/>
+
+    <TextView
+        android:id="@+id/course_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Itera.Course.Description"/>
+
+  </LinearLayout>
+
+
 </RelativeLayout>
