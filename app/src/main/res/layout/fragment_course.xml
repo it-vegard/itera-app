@@ -13,6 +13,34 @@
       android:text="Course Title"
       style="@style/Itera.CourseList.List.Course.Title"/>
 
+  <LinearLayout
+      android:orientation="horizontal"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/course_list_course_start_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:text="3. mars 16:30"
+        style="@style/Itera.CourseList.List.Course.Description"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" - "/>
+
+    <TextView
+        android:id="@+id/course_list_course_end_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:text="19:30"
+        style="@style/Itera.CourseList.List.Course.Description"/>
+
+  </LinearLayout>
+
   <TextView
       android:id="@+id/course_list_course_description"
       android:layout_width="wrap_content"

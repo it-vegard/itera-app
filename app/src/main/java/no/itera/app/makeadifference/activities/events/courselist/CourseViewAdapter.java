@@ -10,6 +10,8 @@ import no.itera.app.makeadifference.activities.events.courselist.CourseListFragm
 import no.itera.app.makeadifference.R;
 import no.itera.app.makeadifference.models.Course;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 /**
@@ -39,6 +41,9 @@ public class CourseViewAdapter extends RecyclerView.Adapter<CourseViewAdapter.Vi
     holder.course = mValues.get(position);
     holder.courseTitleView.setText(mValues.get(position).getTitle());
     holder.courseTitleDescription.setText(mValues.get(position).getDetails());
+    SimpleDateFormat dateFormat = new SimpleDateFormat("dd. MMMM HH:mm");
+    holder.startDateView.setText(dateFormat.format(mValues.get(position).getStartDate()));
+    holder.endDateView.setText(dateFormat.format(mValues.get(position).getEndDate()));
 
     holder.courseView.setOnClickListener(new View.OnClickListener() {
       @Override
@@ -61,6 +66,8 @@ public class CourseViewAdapter extends RecyclerView.Adapter<CourseViewAdapter.Vi
     public final View courseView;
     public final TextView courseTitleView;
     public final TextView courseTitleDescription;
+    public final TextView startDateView;
+    public final TextView endDateView;
     public Course course;
 
     public ViewHolder(View view) {
@@ -68,6 +75,8 @@ public class CourseViewAdapter extends RecyclerView.Adapter<CourseViewAdapter.Vi
       courseView = view;
       courseTitleView = (TextView) view.findViewById(R.id.course_list_course_title);
       courseTitleDescription = (TextView) view.findViewById(R.id.course_list_course_description);
+      startDateView = (TextView) view.findViewById(R.id.course_list_course_start_date);
+      endDateView = (TextView) view.findViewById(R.id.course_list_course_end_date);
     }
 
     @Override
