@@ -48,9 +48,7 @@ public class CreateCourseActivity extends NavigationDrawerActivity
       @Override
       public void onClick(View view) {
         if (saveCourse()) Toast.makeText(view.getContext(), "Saved course!", Toast.LENGTH_SHORT).show();
-        Toast.makeText(view.getContext(), "Should now save activity", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(view.getContext(), CourseListActivity.class);
-        // intent.putExtra("NEW-COURSE-ID", "ID-FROM-DB");
         startActivity(intent);
       }
     });

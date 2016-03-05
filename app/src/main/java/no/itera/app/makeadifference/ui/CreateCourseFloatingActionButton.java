@@ -31,7 +31,6 @@ public class CreateCourseFloatingActionButton extends FloatingActionButton {
     this.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View view) {
-        Toast.makeText(view.getContext(), "Using custom FAB!", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(view.getContext(), CreateCourseActivity.class);
         view.getContext().startActivity(intent);
       }
