@@ -10,13 +10,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 import no.itera.app.makeadifference.R;
 import no.itera.app.makeadifference.models.Course;
-import no.itera.app.makeadifference.models.CourseList;
+import no.itera.app.makeadifference.storage.couchbase.CourseDatabaseManager;
 
 /**
  * A fragment representing a list of Items.
@@ -72,7 +71,9 @@ public class CourseListFragment extends Fragment {
       } else {
         recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
       }
-      List<Course> courseList = new ArrayList<>( CourseList.getDummyCourses().values());
+
+      CourseDatabaseManager dbManager = CourseDatabaseManager.getInstance();
+      List<Course> courseList = dbManager.getAll();
       Collections.sort(courseList, new Course.CourseDateComparator());
       recyclerView.setAdapter(new CourseViewAdapter(courseList, mListener));
     }

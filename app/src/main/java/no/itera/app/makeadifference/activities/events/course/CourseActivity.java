@@ -11,7 +11,7 @@ import android.widget.Toast;
 import no.itera.app.makeadifference.R;
 import no.itera.app.makeadifference.activities.NavigationDrawerActivity;
 import no.itera.app.makeadifference.models.Course;
-import no.itera.app.makeadifference.models.CourseList;
+import no.itera.app.makeadifference.storage.couchbase.CourseDatabaseManager;
 
 public class CourseActivity extends NavigationDrawerActivity {
 
@@ -47,7 +47,7 @@ public class CourseActivity extends NavigationDrawerActivity {
   }
 
   private Course loadCourse(String courseId) {
-    // Currently loading dummy-data. Should load from couchbase instead.
-    return CourseList.getDummyCourses().get(courseId);
+    CourseDatabaseManager dbManager = CourseDatabaseManager.getInstance();
+    return dbManager.get(courseId);
   }
 }
