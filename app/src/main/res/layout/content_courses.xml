@@ -18,13 +18,6 @@
       android:layout_height="wrap_content"
       android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/course_list_title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/course_list_title"
-        style="@style/Itera.CourseList.ListTitle"/>
-
     <fragment
         android:name="no.itera.app.makeadifference.activities.events.courselist.CourseListFragment"
         android:layout_width="match_parent"

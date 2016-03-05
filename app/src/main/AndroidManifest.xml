@@ -11,7 +11,7 @@
       android:theme="@style/AppTheme">
     <activity
         android:name=".activities.events.courselist.CourseListActivity"
-        android:label="@string/app_name"
+        android:label="@string/course_list_activity_title"
         android:theme="@style/AppTheme.NoActionBar">
       <intent-filter>
         <action android:name="android.intent.action.MAIN"/>
@@ -21,7 +21,7 @@
     </activity>
     <activity
         android:name=".activities.events.course.CourseActivity"
-        android:label="@string/title_activity_course"
+        android:label="@string/course_activity_title"
         android:parentActivityName=".activities.events.courselist.CourseListActivity"
         android:theme="@style/AppTheme.NoActionBar">
       <meta-data
@@ -30,7 +30,7 @@
     </activity>
     <activity
         android:name=".activities.events.course.CreateCourseActivity"
-        android:label="@string/title_activity_create_course"
+        android:label="@string/create_course_activity_title"
         android:parentActivityName=".activities.events.courselist.CourseListActivity"
         android:theme="@style/AppTheme.NoActionBar">
       <meta-data

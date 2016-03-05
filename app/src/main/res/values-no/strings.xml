@@ -3,7 +3,7 @@
   <string name="navigation_drawer_open">Åpne navigeringsskuff</string>
   <string name="navigation_drawer_close">Lukk navigeringsskuff</string>
 
-  <string name="course_list_title">Kommende arrangementer</string>
+  <string name="course_list_activity_title">Kommende arrangementer</string>
 
   <string name="action_settings">Innstillinger</string>
 </resources>

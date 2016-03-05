@@ -4,11 +4,11 @@
   <string name="navigation_drawer_open">Open navigation drawer</string>
   <string name="navigation_drawer_close">Close navigation drawer</string>
 
-  <string name="course_list_title">Kommende arrangementer</string>
+  <string name="course_list_activity_title">Kommende arrangementer</string>
 
   <string name="action_settings">Settings</string>
-  <string name="title_activity_course">Itera - Make a Difference</string>
-  <string name="title_activity_create_course">CreateCourseActivity</string>
+  <string name="course_activity_title">Arrangementsinformasjon</string>
+  <string name="create_course_activity_title">Opprett nytt arrangement</string>
 
   <string name="course_title_label">Tittel</string>
   <string name="course_description_label">Beskrivelse</string>
