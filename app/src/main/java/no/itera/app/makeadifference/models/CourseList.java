@@ -49,7 +49,7 @@ public class CourseList {
   private static Course createDummyCourse(String id, Date startDate) {
     Date endDate = startDate;
     endDate.setTime(startDate.getTime() + ((int) Math.random() * 7200000));
-    return new Course(id, "Dummy course " + id, "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean finibus posuere dui, eu faucibus neque fermentum eget. Nam eu ornare ante. Cras massa mi, semper ac egestas eu, rutrum et massa. Donec pellentesque, nibh eu tincidunt sollicitudin, ante neque malesuada mi, eu lobortis magna mauris eget ex.", startDate, endDate);
+    return new Course("Dummy course " + id, "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean finibus posuere dui, eu faucibus neque fermentum eget. Nam eu ornare ante. Cras massa mi, semper ac egestas eu, rutrum et massa. Donec pellentesque, nibh eu tincidunt sollicitudin, ante neque malesuada mi, eu lobortis magna mauris eget ex.", startDate, endDate);
   }
 
   public static Map<String, Course> getDummyCourses() {
