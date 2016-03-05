@@ -65,4 +65,21 @@
     <item name="android:layout_marginBottom">@dimen/course_description_margin_bottom</item>
   </style>
 
+  <style name="Itera.Button">
+    <item name="android:paddingTop">15dp</item>
+    <item name="android:paddingRight">25dp</item>
+    <item name="android:paddingBottom">15dp</item>
+    <item name="android:paddingLeft">25dp</item>
+  </style>
+
+  <style name="Itera.Button.Create" parent="Itera.Button">
+    <item name="android:background">@color/iteraForegroundPrimary</item>
+    <item name="android:textColor">@color/iteraTextLight</item>
+  </style>
+
+  <style name="Itera.Button.Delete" parent="Itera.Button">
+    <item name="android:background">@color/iteraForegroundPrimary</item>
+    <item name="android:textColor">@color/iteraTextLight</item>
+  </style>
+
 </resources>

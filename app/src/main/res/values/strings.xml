@@ -14,4 +14,6 @@
   <string name="course_description_label">Beskrivelse</string>
   <string name="course_start_date_label">Starter</string>
   <string name="course_end_date_label">Slutter</string>
+
+  <string name="button_delete_course">Slett</string>
 </resources>

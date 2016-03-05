@@ -30,6 +30,13 @@
         android:layout_height="wrap_content"
         style="@style/Itera.Course.Description"/>
 
+    <Button
+        android:id="@+id/delete_course_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Itera.Button.Delete"
+        android:text="@string/button_delete_course"/>
+
   </LinearLayout>
 
 
