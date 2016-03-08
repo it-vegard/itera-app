@@ -39,13 +39,22 @@
 
   <style name="Itera.CourseList.List"/>
 
-  <style name="Itera.CourseList.List.Course">
-    <item name="android:padding">@dimen/courses_list_item_padding</item>
+  <style name="Itera.CourseList.List.Course"/>
+
+  <style name="Itera.CourseList.List.Course.Container">
+    <item name="android:layout_marginTop">@dimen/courses_list_item_padding_vertical</item>
+    <item name="android:layout_marginRight">@dimen/courses_list_item_padding_horizontal</item>
+    <item name="android:layout_marginBottom">@dimen/courses_list_item_padding_vertical</item>
+    <item name="android:layout_marginLeft">@dimen/courses_list_item_padding_horizontal</item>
   </style>
 
   <style name="Itera.CourseList.List.Course.Title">
     <item name="android:textSize">@dimen/sub_title_size</item>
     <item name="android:textStyle">bold</item>
+  </style>
+
+  <style name="Itera.CourseList.List.Course.Date">
+    <item name="android:textStyle">italic</item>
   </style>
 
   <style name="Itera.CourseList.List.Course.Description">

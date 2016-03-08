@@ -21,7 +21,8 @@
   <dimen name="courses_list_title_padding_vertical">@dimen/default_padding</dimen>
   <dimen name="courses_list_title_padding_horizontal">@dimen/default_padding_horizontal</dimen>
 
-  <dimen name="courses_list_item_padding">@dimen/padding_small</dimen>
+  <dimen name="courses_list_item_padding_vertical">20dp</dimen>
+  <dimen name="courses_list_item_padding_horizontal">5dp</dimen>
 
   <dimen name="course_title_margin_bottom">@dimen/margin_large</dimen>
   <dimen name="course_description_margin_bottom">@dimen/default_margin</dimen>
