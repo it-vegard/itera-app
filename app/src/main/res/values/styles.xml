@@ -5,7 +5,7 @@
     <!-- Customize your theme here. -->
     <item name="colorPrimary">@color/iteraPrimary</item>
     <item name="colorPrimaryDark">@color/iteraSecondary</item>
-    <item name="colorAccent">@color/iteraTertiary</item>
+    <item name="colorAccent">@color/iteraPrimary</item>
   </style>
 
   <style name="AppTheme.NoActionBar">
@@ -81,5 +81,5 @@
     <item name="android:background">@color/iteraForegroundPrimary</item>
     <item name="android:textColor">@color/iteraTextLight</item>
   </style>
-
+  
 </resources>
