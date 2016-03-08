@@ -32,4 +32,8 @@
   <dimen name="sub_sub_title_size">15dp</dimen>
   <dimen name="text_size">15dp</dimen>
   <dimen name="text_margin">16dp</dimen>
+
+  <!-- Search drawer -->
+  <dimen name="search_drawer_label_size">16dp</dimen>
+  <dimen name="search_drawer_label_size_large">20dp</dimen>
 </resources>

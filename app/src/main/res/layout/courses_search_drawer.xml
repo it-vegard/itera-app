@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+  <TextView
+      android:id="@+id/search_drawer_filter_title"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:paddingLeft="@dimen/default_padding_horizontal"
+      android:text="@string/search_drawer_filter_title"
+      style="@style/Itera.Search.Label.Large"/>
+
+  <SearchView
+      android:id="@+id/search_view"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:inputType="text"
+      />
+
+  <LinearLayout
+      android:id="@+id/search_drawer_filter_container"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      style="@style/Itera.Search.Filter"
+      >
+
+    <TextView
+        android:id="@+id/search_drawer_filter_type_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/search_drawer_filter_type"
+        style="@style/Itera.Search.Label"
+        android:layout_marginTop="0dp"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/search_type_course_day"
+        android:id="@+id/search_filter_type_course_day"
+        style="@style/Itera.Checkbox"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/search_type_course_night"
+        android:id="@+id/search_filter_type_course_night"
+        style="@style/Itera.Checkbox"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/search_type_itera_academy"
+        android:id="@+id/search_filter_type_itera_academy"
+        style="@style/Itera.Checkbox"/>
+
+    <TextView
+        android:id="@+id/search_drawer_filter_organizer_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/search_drawer_filter_organizer"
+        style="@style/Itera.Search.Label"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/search_organizer_course_committe"
+        android:id="@+id/search_filter_organizer_course_committe"
+        style="@style/Itera.Checkbox"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/search_organizer_itera_academy"
+        android:id="@+id/search_filter_organizer_itera_academy"
+        style="@style/Itera.Checkbox"/>
+
+    <TextView
+        android:id="@+id/search_drawer_filter_department_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/search_drawer_filter_department"
+        style="@style/Itera.Search.Label"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/search_department_technology"
+        android:id="@+id/search_filter_department_technology"
+        style="@style/Itera.Checkbox"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/search_department_communication"
+        android:id="@+id/search_filter_department_communication"
+        style="@style/Itera.Checkbox"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/search_department_test"
+        android:id="@+id/search_filter_department_test"
+        style="@style/Itera.Checkbox"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/search_department_project_management"
+        android:id="@+id/search_filter_department_project_management"
+        style="@style/Itera.Checkbox"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/search_department_consulting"
+        android:id="@+id/search_filter_department_consulting"
+        style="@style/Itera.Checkbox"/>
+
+  </LinearLayout>
+
+</LinearLayout>

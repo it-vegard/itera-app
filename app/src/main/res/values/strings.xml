@@ -18,4 +18,25 @@
   <string name="button_create_course">Opprett</string>
   <string name="button_update_course">Lagre</string>
   <string name="button_delete_course">Slett</string>
+
+  <!-- Search drawer -->
+  <string name="search_drawer_filter_title">Filtrer arrangementer</string>
+  <string name="search_drawer_filter_department">Avdeling</string>
+  <string name="search_drawer_filter_type">Type</string>
+  <string name="search_drawer_filter_organizer">Arrangør</string>
+  <string name="search_drawer_search_hint">Finn arrangement</string>
+
+  <string name="search_type_course_day">Fagdag</string>
+  <string name="search_type_course_night">Fagkveld</string>
+  <string name="search_type_itera_academy">Itera Academy</string>
+
+  <string name="search_organizer_course_committe">Faggruppen</string>
+  <string name="search_organizer_itera_academy">Itera Academy</string>
+
+  <string name="search_department_technology">Teknologi</string>
+  <string name="search_department_communication">Kommunikasjon</string>
+  <string name="search_department_test">Testledelse</string>
+  <string name="search_department_project_management">Prosjektledelse</string>
+  <string name="search_department_consulting">Rådgivning</string>
+
 </resources>

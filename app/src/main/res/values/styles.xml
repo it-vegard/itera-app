@@ -6,6 +6,10 @@
     <item name="colorPrimary">@color/iteraPrimary</item>
     <item name="colorPrimaryDark">@color/iteraSecondary</item>
     <item name="colorAccent">@color/iteraPrimary</item>
+    <item name="android:searchViewStyle">@style/AppTheme.SearchView</item>
+    <item name="android:editTextColor">@color/iteraTextDark</item>
+    <item name="android:textColorHint">@color/iteraTextDark</item>
+    <item name="android:textColor">@color/iteraTextDark</item>
   </style>
 
   <style name="AppTheme.NoActionBar">
@@ -90,5 +94,51 @@
     <item name="android:background">@color/iteraForegroundPrimary</item>
     <item name="android:textColor">@color/iteraTextLight</item>
   </style>
+
+  <style name="Itera.Label">
+    <item name="android:textColor">@color/iteraTextDark</item>
+    <item name="android:textSize">@dimen/search_drawer_label_size</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:layout_marginTop">@dimen/activity_vertical_margin</item>
+  </style>
+
+  <style name="Itera.Label.Large">
+    <item name="android:layout_marginTop">40dp</item>
+    <item name="android:textSize">@dimen/search_drawer_label_size_large</item>
+  </style>
+
+  <style name="Itera.Checkbox">
+    <item name="android:textColor">@color/iteraTextDark</item>
+    <item name="android:theme">@android:style/Theme.Material.Light</item>
+  </style>
+
+  <!-- Search drawer -->
+
+  <style name="Itera.Search">
+    <item name="android:textColor">@color/iteraTextDark</item>
+    <item name="android:layout_marginTop">@dimen/default_padding_vertical</item>
+  </style>
+
+  <style name="Itera.SearchBar">
+    <item name="android:textColor">@color/iteraTextDark</item>
+    <item name="android:color">@color/iteraTextDark</item>
+    <item name="searchIcon">@drawable/ic_search_black_24dp</item>
+  </style>
+
+  <style name="AppTheme.SearchView" parent="Widget.AppCompat.SearchView">
+    <item name="android:searchIcon">@drawable/ic_search_black_24dp</item>
+    <item name="android:closeIcon">@drawable/ic_clear_black_24dp</item>
+    <item name="android:textColor">@color/iteraTextDark</item>
+    <item name="android:queryHint">@string/search_drawer_search_hint</item>
+    <item name="android:textColorHint">@color/iteraTextDark</item>
+    <item name="android:iconifiedByDefault">false</item>
+  </style>
+
+  <style name="Itera.Search.Filter">
+    <item name="android:paddingLeft">@dimen/default_padding_horizontal</item>
+  </style>
+
+  <style name="Itera.Search.Label" parent="Itera.Label"/>
+  <style name="Itera.Search.Label.Large" parent="Itera.Label.Large"/>
   
 </resources>

@@ -23,4 +23,12 @@
       app:headerLayout="@layout/nav_header_courses"
       app:menu="@menu/activity_courses_drawer"/>
 
+  <no.itera.app.makeadifference.ui.SearchDrawerView
+      android:id="@+id/courses_search_drawer"
+      android:layout_width="wrap_content"
+      android:layout_height="match_parent"
+      android:layout_gravity="end"
+      android:fitsSystemWindows="true"
+      app:headerLayout="@layout/courses_search_drawer"/>
+
 </android.support.v4.widget.DrawerLayout>
